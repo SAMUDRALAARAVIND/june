@@ -1,0 +1,29 @@
+Java :
+
+variables and data types(int a = 20; float, double , long etc) 
+conditional statements(if , else if, else , switch-case)
+loops(for, do while, while)
+arrays, strings (int[], char[], ArrayList, String)
+Collections
+OOPs ()
+
+
+Javascript:
+
+variables and data types(int a = 20; float, double , long etc) 
+conditional statements(if , else if, else , switch-case)
+loops(for, do while, while), arrays and strings
+Hoisting
+functions( scope chain, closures, primitive and non prim, call by value,call by ref, heap memory )
+
+DOM(used to manipulate the webpage)
+
+async javascript(Promises, async/await)
+
+making network calls to load data
+
+2 projects (aution status app, partial Youtube close with real time data )
+
+
+
+DSA (not a topic specific a language)

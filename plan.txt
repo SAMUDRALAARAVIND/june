@@ -1,0 +1,7 @@
+box-model, flex, grid, position, media queries, animations
+
+using HTML , CSS  => dead page ()
+
+CPU, Hard disk(storage), RAM
+
+SERVER => group of systems
