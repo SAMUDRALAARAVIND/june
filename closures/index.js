@@ -132,9 +132,9 @@ console.log(a , b , c) // 20, [90, 100], {name: 'aravind'}
 // callme(10, undefined);
 
 
-let obj = {name: "aravind"}
+// let obj = {name: "aravind"}
 
-Object.seal(obj);
-obj.name = "SKJKJSLSK"
-obj.x = "dfdjfk"
-console.log(obj)
+// Object.seal(obj);
+// obj.name = "SKJKJSLSK"
+// obj.x = "dfdjfk"
+// console.log(obj)
