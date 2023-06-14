@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .danger {
+            color: red ;
+        }
+        .success {
+            color: green ;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- <div id="root" class="a">
+        <p class="c">Some Para</p>
+        <div id="parent" class="b">
+            <div id="child" ></div>
+        </div>
+    </div> -->
+    <button id="btn" ondblclick="doubleClick()" onclick="changeText()">Change The text</button>
+    <p id="abc" class="danger">aravind</p>
+    <!-- Behind the scenes the above para is a n object #100 -->
+
+    <!--    
+        
+        Every html element is a node => object(javascript object)
+
+        <div id="parent" class="b" style="color: red; background-color: blue">
+            <div id="child" >abc</div>
+            <p>Some para</p>
+            <button disabled>Button</button>
+        </div>
+
+
+        {
+            tagName: "div",
+            className: "b",
+            id: "parent",
+            style: {
+                color: 'red',
+                backgroundColor: 'blue'
+            },
+            children: [
+                {
+                    tagName: 'div',
+                    id: 'child',
+                    innerText: 'abc',
+                    children: []
+                },
+                {
+                    tagName: 'p',
+                    innerText: 'Some para',
+                    children: []
+                },
+                {
+                    tagName: 'button',
+                    innerText: 'Button',
+                    children: [],
+                    disabled: true
+                }
+            ]
+        }
+
+
+
+
+
+     -->
+
+
+
+
+    <script>console.clear() </script>
+    <script src="./index.js"></script>
+</body>
+</html>
