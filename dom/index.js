@@ -143,3 +143,8 @@ function solve(currentIndex, calculatedString) {
 solve(0, "")
 
 console.log(solutions)
+
+let obj = {
+    ...(true && {a: 2})
+}
+console.log(obj)

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        position: fixed ;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(53, 53, 49, 0.289);
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+      .modal-body{
+        display: flex;
+        flex-flow: column wrap;
+        background-color: white ;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 2px 2px 2px 5px gray;
+      }
+
+      #root {
+        width: 200px;
+        height: 200px;
+        border: 2px solid red ;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section>
+        <b>Some bold</b>
+        parent element
+        <div class="test" id="parent">
+            <div class="test abc">Test element</div>
+        </div>
+        <div class="test">
+            Sibling Element
+        </div>
+    </section> -->
+
+
+    <div id="root">
+
+    </div>
+
+    <input type="text">
+    <div id="results">
+        
+    </div>
+
+
+    <button id="btn">ADD element</button>
+
+
+
+    <script>
+      console.clear();
+    </script>
+
+    <script src="./day2.js"></script>
+  </body>
+</html>
