@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+}
+.container {
+    min-height: 300px;
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+}
+.box {
+    width: 300px;
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display:  flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.title + .material-icons {
+    visibility: hidden;
+}
+.title-container > .title:hover + .material-icons {
+    visibility: visible;
+}
+.title:hover {
+    background-color: #47516172;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.box .title {
+    font-size: 14px;
+    color: #5E6C84;
+    flex-grow: 1;
+    transition: 0.2s ;
+}
+
+#create-issue {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #41526E;
+    gap: 10px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+#create-issue:hover {
+    background-color: #47516172;
+}
+.item {
+    border: 2px solid #0052CC ; 
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+.item > textarea, .item > textarea:focus {
+    border : none ;
+    outline: none ;
+    background-color: transparent;
+}
+.item > select:focus {
+    outline: none ;
+}
+.item > select {
+    border: none ;
+    padding: 10px;
+    background-color: transparent;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+
+.modal {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 82, 204, 0.137);
+    display: flex;
+    justify-content: center;
+}
+
+.modal  form {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 100px;
+    gap: 20px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 3px;
+    width: 30vw;
+    position: relative ;
+}
+
+.modal input , .modal textarea , .modal button, .modal select{
+    padding:  10px;
+    border-radius: 5px;
+    background-color: #F4F5F7;
+    border: none ;
+}
+.modal button{
+    background-color: #0052CC;
+    color: white ;
+    cursor: pointer;
+}
+.close {
+    position: absolute ;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.card {
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px 1px #5e6c8424 ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .task-name {
+    font-weight: 500 ;
+    font-size: 18px;
+}
+.card .description {
+    font-size: 14px;
+}
+.card .status {
+    font-size: 12px;
+}
+.card .status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .assignee::before {
+    display: inline-block;
+    content: attr(data-short-name);
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: orange;
+}
