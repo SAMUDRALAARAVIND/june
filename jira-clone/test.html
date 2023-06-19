@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        #container {
+            width: 50vw ;
+            margin: auto ;
+            height: 400px;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+        }
+        .inactive-container {
+            background-color: gray;
+        }
+        .active-container {
+            background-color: green;
+            transform: scaleX(1.1);
+            border: 2px  dashed blue ;
+        }
+    </style>
+</head>
+<body>
+    <!-- body => #400 -->
+    <h1>Practice</h1>
+    <div id="item" draggable="true" > 
+        <!-- item => #100 , bold => #150 -->
+        <b>Bold text</b>
+    </div>
+    <div id="container" class="inactive-container">
+        
+    </div>
+
+    <script>
+        console.clear();
+        const item = document.getElementById("item"); 
+        const container = document.getElementById("container")
+
+        item.addEventListener("dragstart", () => {
+            console.log("you started dragging")
+        })
+
+        // container.addEventListener("dragover", () => {
+        //     console.log("some element is dragged onto me")
+        // })
+
+        container.addEventListener("dragenter", () => {
+            container.className = "active-container"
+        })
+
+        container.addEventListener("dragleave", () => {
+            container.className = "inactive-container" ; 
+        })
+
+        container.addEventListener("dragover", (x) => {
+            x.preventDefault();
+        });
+
+        container.addEventListener("drop", (event) => {
+            event.preventDefault();
+            container.appendChild(item);
+        })
+
+        // container => drop, dragover
+        // input => mouseenter, keyup, keydown, change, click
+    </script>
+</body>
+</html>

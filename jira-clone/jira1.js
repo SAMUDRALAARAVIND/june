@@ -1,6 +1,5 @@
 const createIssueButton  = document.getElementById("create-issue"); 
 const box = document.getElementsByClassName("box")[0] ;
-
 /*
 
     TODO , IN_PROGRESS, COMPLETED
@@ -13,6 +12,12 @@ const box = document.getElementsByClassName("box")[0] ;
         assignee: "Aravind"
     }
 */
+
+const statusMapping = {
+    COMPLETED: 'Completed',
+    IN_PROGRESS: 'In Progress',
+    TODO: 'To Do'
+}
 
 const items = [
     
@@ -55,22 +60,26 @@ function addNewTask(task) {
 
     const card = document.createElement("div");
     card.className = "card" ;
+    card.addEventListener("dragstart", () => {
+        activeDraggedElement = card ;
+        activeDraggedElement.style.visibility = "hidden" ;
+    })
+
+    task.status !== 'COMPLETED' && (card.draggable = "true") ;
+    
     const words = task.assignee.split(" ");
-    // aravind samudrala => ["aravind", "samudrala", "abc"]
     let nickName = words[0][0].toUpperCase() ;
     if(words.length > 1) {
         nickName += words[words.length - 1][0].toUpperCase();
     }
     
     card.innerHTML = `
-        <p class="task-name">Task Name</p>
-        <p class="description">Some random description</p>
+        <p class="task-name">${task.taskName}</p>
+        <p class="description">${task.description}</p>
         <div class="status-container">
-            <p data-short-name="${nickName}" class="assignee">Aravind</p>
-            <p class="status">In Progress</p>
+            <p data-short-name="${nickName}" class="assignee">${task.assignee}</p>
+            <p class="status">${statusMapping[task.status]}</p>
         </div>`;
-
-
     const box = document.getElementById(task.status)
     box.appendChild(card);
 }
